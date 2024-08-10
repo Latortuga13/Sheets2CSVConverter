@@ -52,10 +52,8 @@ def main():
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
-            # Ensure the credentials file path is not hard-coded
-            creds_file = os.getenv('GOOGLE_APPLICATION_CREDENTIALS', 'credentials.json')
             flow = InstalledAppFlow.from_client_secrets_file(
-                creds_file, SCOPES
+                "credentials.json", SCOPES
             )
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
@@ -111,6 +109,7 @@ def main():
 
     except HttpError as err:
         print(err)
+
 
 if __name__ == "__main__":
     main()
