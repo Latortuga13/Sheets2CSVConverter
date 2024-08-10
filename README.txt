@@ -36,3 +36,10 @@ from. Both UPDATE and CLEAR range can be put as a range like SAMPLE_RANGE_NAME.
 Finally, the application I created outputs a CSV of the entire spreadsheet in a file called output.csv when
 you run your python SheetToCSV.py 'your config file".json command. This file should be in the same
 directory as the application.
+
+After this is done. If u follow the steps at the following url
+
+https://developers.google.com/drive/api/quickstart/python
+
+and add my sheet2CSV converter instead of the sample quickstart code given, the sheettocsv.py file should
+return a csv file after running the "python SheetToCSV.py 'your config'.json" command.
